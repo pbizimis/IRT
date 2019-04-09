@@ -1,8 +1,13 @@
 import os
 
-from flask import Flask
-from landing_page import index
-from error_page import page_not_found
+from flask import Flask, render_template
+
+#make it runnable on GOOGLE
+#waitress-serve
+#server.py
+
+def page_not_found(e):
+    return render_template("errors/404.html"), 404
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
@@ -25,7 +30,8 @@ def create_app(test_config=None):
         pass
 
     @app.route('/')
-    index()
+    def index():
+        return render_template("index.html")
 
     return app
 
