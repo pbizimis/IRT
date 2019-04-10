@@ -86,6 +86,7 @@ body {
     width: 100%;
 }
 .container-div h1 {
+    color: white;
     position: absolute;
     left: 0;
     top: 10%;
@@ -93,11 +94,13 @@ body {
     text-align: center;
 }
 .container-div p {
+    color: white;
     position: absolute;
     left: 0;
     top: 40%;
     width: 100%;
-    text-align: center;
+    text-align: left;
+    margin: 0 30px 0 30px;
 }
 .section-2 {
     background-color: lightgrey;
