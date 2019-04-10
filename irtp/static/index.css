@@ -48,7 +48,7 @@ body {
     position: absolute;
     margin-top: 30px;
     margin-left: 30px;
-    cursor: pointer;
+    cursor: default;
 }
 .bar-wrap .bar {
     width: 30px;
@@ -79,10 +79,9 @@ body {
     position: relative;
 }
 .intro {
-    background: url(https://cdn1.vectorstock.com/i/1000x1000/97/20/patient-at-doctors-office-cartoon-vector-19959720.jpg) no-repeat center center;
-    background-size: cover;
-    filter: blur(2px);
+    background: linear-gradient(40deg, #69A9E3, #2B9AFF);
     height: 20em;
+    width: 100%;
 }
 .container-div h1 {
     position: absolute;
