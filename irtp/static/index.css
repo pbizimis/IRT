@@ -3,10 +3,12 @@ body {
     padding: 0;
     min-width: 320px;
     font-family: "Roboto", sans-serif;
+    line-height: 150%;
+    letter-spacing: 1px;
 }
 .titles {
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 400;
 }
 .para {
     font-size: 20px;
@@ -79,7 +81,7 @@ body {
     position: relative;
 }
 .intro {
-    background: linear-gradient(40deg, #69A9E3, #2B9AFF);
+    background: linear-gradient(0deg, rgb(133, 196, 255), #2699FB);
     height: 20em;
     width: 100%;
 }
