@@ -21,16 +21,38 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background: linear-gradient(0deg, rgb(133, 196, 255), #2699FB);
     overflow-x: hidden;
     padding-top: 60px;
+    text-align: center;
     transition: 0.5s;
+}
+.sidenav-mob h1 {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 35px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+.sidenav-mob p {
+    text-decoration: none;
+    margin-top: -20px;
+    margin-bottom: 70px;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
 }
 .sidenav-mob a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.3s;
     font-family: "Roboto", sans-serif;
