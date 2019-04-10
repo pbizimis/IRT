@@ -4,9 +4,12 @@
 <title>Homepage</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+<link rel="stylesheet" type="text/css" href="../static/index.css">
+<!-- {{ url_for('static', filename='index.css') }} -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,500i" rel="stylesheet">
-<script src="{{ url_for('static', filename='index.js') }}"></script>
+
+<script src="../static/index.js"></script>
+<!-- {{ url_for('static', filename='index.js') }} -->
 <meta property="og:site_name" content="Individuelles Rückentraining">
 <meta property="og:description" content="Das ist die neue Website der IRT Bad Homburg">
 </head>
@@ -45,10 +48,9 @@
         <div class="intro">
         </div>
         <h1 class="titles">Individuelles Rückentraining für jeden.</h1>
-        <p class="para">Rückenschmerzen sind für viele
-            Menschen eine Qual.
-            Wir wollen sie langfristig
-            durch Training davon befreien.</p>
+        <div class="p-div">
+            <p class="para">Rückenschmerzen sind für viele Menschen eine Qual. Wir wollen sie langfristig durch Training davon befreien.</p>
+        </div>
     </div>
 </section>
 
