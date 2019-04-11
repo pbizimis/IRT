@@ -1,12 +1,13 @@
 function openNav() {
-    document.getElementById("sidenav").style.width = "100%";
+    document.getElementById("sidenav").style.right = "0";
 }
 
 function closeNav() {
-    document.getElementById("sidenav").style.width = "0";
+    document.getElementById("sidenav").style.right = "100%";
 }
 
 
+/*
 function toggleNavbar() {
     var element = document.getElementById("test");
     if(element.classList.contains("is-active")) {
@@ -17,4 +18,4 @@ function toggleNavbar() {
         document.getElementById("sidenav").style.width = "100%";
     }
 }
-    
+*/

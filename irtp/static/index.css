@@ -14,20 +14,20 @@ body {
     font-size: 20px;
     font-weight: 500;
 }
-.sidenav-mob {
+.sidenav-inner {
     height: 100%;
-    width: 0;
+    width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
+    right: 100%;
     background: linear-gradient(0deg, rgb(133, 196, 255), #2699FB);
     overflow-x: hidden;
     padding-top: 60px;
     text-align: center;
     transition: 0.5s;
 }
-.sidenav-mob h1 {
+.sidenav-inner h1 {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 35px;
@@ -37,7 +37,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
-.sidenav-mob p {
+.sidenav-inner p {
     text-decoration: none;
     margin-top: -20px;
     margin-bottom: 70px;
@@ -48,7 +48,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
-.sidenav-mob a {
+.sidenav-inner a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -58,10 +58,10 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
 }
-.sidenav-mob a:hover {
+.sidenav-inner a:hover {
     color: #f1f1f1;
 }
-.sidenav-mob .closebtn {
+.sidenav-inner .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
@@ -148,7 +148,7 @@ body {
 
 /*
 TESTING
-*/
+
 .hamburger {
   position: absolute;
   right: 10px;
@@ -193,11 +193,13 @@ TESTING
   transition-timing-function: ease; }
 .hamburger-inner::before, .hamburger-inner::after {
   content: "";
-  display: block; }
+  display: block;
+}
 .hamburger-inner::before {
   top: -10px; }
 .hamburger-inner::after {
-  bottom: -10px; }
+  bottom: -10px;
+}
 
 
 .hamburger--spin .hamburger-inner {
@@ -210,13 +212,18 @@ TESTING
 .hamburger--spin.is-active .hamburger-inner {
   transform: rotate(225deg);
   transition-delay: 0.12s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); 
+  background-color: white;}
 .hamburger--spin.is-active .hamburger-inner::before {
   top: 0;
   opacity: 0;
-  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
 .hamburger--spin.is-active .hamburger-inner::after {
   bottom: 0;
   transform: rotate(-90deg);
-  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
-      
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  background-color: white;
+}
+  
+*/

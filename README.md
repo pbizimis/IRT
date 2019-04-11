@@ -11,6 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 - Python3
 - Virtualenv
+- Flask
 - waitress
 
 Start by creating the virtual environment:
@@ -29,6 +30,12 @@ Install waitress (Use pip not pip3)
 ```
 /IRT/
 pip install waitress
+```
+
+Install Flask (Use pip not pip3)
+```
+/IRT/
+pip install Flask
 ```
 
 ## Starting the Server/Website
