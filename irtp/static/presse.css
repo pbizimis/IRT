@@ -1,0 +1,8 @@
+.article {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(186, 186, 240);
+}
+.article h1 {
+    margin-top: 0;
+}

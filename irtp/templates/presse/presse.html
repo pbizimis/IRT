@@ -1,0 +1,22 @@
+{% extends "nav.html" %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="../static/presse.css">
+<!-- {{ url_for('static', filename='presse.css') }} -->
+{% endblock %}
+
+{% block main %}
+
+<section>
+    <div class="article">
+        {% for article in articles %}
+        <div>
+            <img src="/static/presse/dbbilder/{{ article[0] }}.png" alt="Bild">
+            <h1>Author: {{ article[1] }}</h1>
+            <h1>Date: {{ article[2] }}</h1>
+            <h1>Text: {{ article[3] }}</h1>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

@@ -8,4 +8,4 @@ bp = Blueprint("presse", __name__, url_prefix='/presse')
 @bp.route("/")
 def presse():
     articles = get_articles()
-    return render_template("presse.html", articles=articles)
+    return render_template("presse/presse.html", articles=articles)
