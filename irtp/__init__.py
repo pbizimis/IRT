@@ -31,8 +31,16 @@ def create_app(test_config=None):
 
     @app.route('/')
     def index():
+        return "Under Construction! Please do not hack!"
+
+    @app.route('/lp')
+    def lp():
         return render_template("index.html")
+
+    from . import presse
+    app.register_blueprint(presse.bp)
 
     return app
 
+#important addition in order to use waitress
 app = create_app()
