@@ -12,15 +12,19 @@
     margin: auto;
     position: relative;
 }
+.article-pic img {
+    height: auto;
+    width: 100%;
+}
 .article-pic .article-date {
     position: absolute;
     background-color: white;
     width: 40px;
     height: 300px;
-    left: 10px;
+    left: 30px;
     top: 0px;
 }
-.article-pic .article-date h1{
+.article-pic .article-date p{
     margin: 0;
     position: absolute;
     bottom: 0px;

@@ -11,14 +11,19 @@
         <div class="article-pic">
             <img src="/static/presse/dbbilder/{{ article[0] }}.png" alt="Bild">
                 <div class="article-date">
-                    <h1>{{ article[2] }}</h1>
+                    {% for date in article[2] %}
+                    <p>{{ date[0] }}</p>
+                    <p>{{ date[1] }}</p>
+                    <p>{{ date[2] }}</p>
+                    {% endfor %}
                 </div>
                 <div class="dotted-line">
                 </div>
         </div>
         <div class="article-text">
-            <h1>{{ article[1] }}</h1>
-            <h3>{{ article[3] }}</h3>
+            <h1>{{ article[3] }}</h1>
+            <h3>{{ article[1] }}</h3>
+            <h3>{{ article[4] }}</h3>
         </div>
     {% endfor %}
 </section>
