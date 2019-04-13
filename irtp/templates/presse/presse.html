@@ -6,17 +6,21 @@
 
 {% block main %}
 
-<section>
-    <div class="article">
-        {% for article in articles %}
-        <div>
+<section class="articles-section">
+    {% for article in articles %}
+        <div class="article-pic">
             <img src="/static/presse/dbbilder/{{ article[0] }}.png" alt="Bild">
-            <h1>Author: {{ article[1] }}</h1>
-            <h1>Date: {{ article[2] }}</h1>
-            <h1>Text: {{ article[3] }}</h1>
+                <div class="article-date">
+                    <h1>{{ article[2] }}</h1>
+                </div>
+                <div class="dotted-line">
+                </div>
         </div>
-        {% endfor %}
-    </div>
+        <div class="article-text">
+            <h1>{{ article[1] }}</h1>
+            <h3>{{ article[3] }}</h3>
+        </div>
+    {% endfor %}
 </section>
 
 {% endblock %}
