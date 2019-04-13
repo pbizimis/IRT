@@ -7,23 +7,32 @@
 {% block main %}
 
 <section class="articles-section">
+
+    <div class="title-div">
+        <h1>Presse</h1>
+    </div>
+
+
     {% for article in articles %}
         <div class="article-pic">
             <img src="/static/presse/dbbilder/{{ article[0] }}.png" alt="Bild">
                 <div class="article-date">
-                    {% for date in article[2] %}
-                    <p>{{ date[0] }}</p>
-                    <p>{{ date[1] }}</p>
-                    <p>{{ date[2] }}</p>
-                    {% endfor %}
+                        <div class="article-date-wrapper">
+                            <div class="day-month">
+                                <h2 class="day">{{ article[2][0] }}</h2>
+                                <h2 class="month">{{ article[2][1] }}</h2>
+                            </div>
+                            <h2 class="year">{{ article[2][2] }}</h2>
+                        </div>
                 </div>
                 <div class="dotted-line">
                 </div>
         </div>
         <div class="article-text">
-            <h1>{{ article[3] }}</h1>
-            <h3>{{ article[1] }}</h3>
-            <h3>{{ article[4] }}</h3>
+            <h1 class="atricle-title">{{ article[3] }}</h1>
+            <h3 class="article-author">von {{ article[1] }}</h3>
+            <p class="article-p">{{ article[4] }}</p>
+            <div class="article-line"></div>
         </div>
     {% endfor %}
 </section>
