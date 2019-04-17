@@ -1,0 +1,169 @@
+/* BODY */
+#body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-family: "Roboto", sans-serif;
+    line-height: 170%;
+    letter-spacing: 1px;
+}
+
+/* NAVBAR */
+.sidenav-inner {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 100%;
+    background: linear-gradient(0deg, rgb(133, 196, 255), #2699FB);
+    overflow-x: hidden;
+    padding-top: 60px;
+    text-align: center;
+    transition: 0.5s;
+}
+.sidenav-inner #sidenav-h {
+    padding: 8px 8px 20px 32px;
+    text-decoration: none;
+    font-size: 40px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+.sidenav-inner p {
+    text-decoration: none;
+    margin-top: -20px;
+    margin-bottom: 70px;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+.sidenav-inner a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+.sidenav-inner a:hover {
+    color: #f1f1f1;
+}
+.sidenav-inner .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.bar-wrap {
+    position: absolute;
+    right: 10px;
+}
+.bar-wrap .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #2699FB;
+    margin: 0 0 8px 0;
+}
+.bar-wrap #last {
+    width: 20px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+}
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: left;
+}
+.heading {
+    font-weight: 500;
+    font-size: 1.8em;
+    color: #2699FB;
+    margin: auto;
+}
+
+/* FOOTER */
+.footer {
+    display: grid;
+    height: auto;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 70px 180px;
+    grid-template-areas:
+        "top top"
+        "mid mid"
+        "info contact";
+    justify-items: center;
+    align-items: flex-start;
+    background-color: rgb(0, 134, 251);
+    color: white;
+}
+.number1 {
+    width: 100%;
+    height: 100%;
+    grid-area: top;
+    text-align: center;
+}
+.number1 h1 {
+    margin: 20px 0 0 0;
+}
+.number1 p {
+    margin: 0;
+}
+.number2 {
+    width: 100%;
+    height: 100%;
+    grid-area: mid;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.number2 .newsletter-form {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+.number2 .newsletter-form input{
+    margin: 0;
+    padding: 0;
+}
+.info {
+    grid-area: info;
+    justify-self: end;
+    margin-right: 7%;
+    height: 80%;
+}
+.info a {
+    text-align: end;
+    display: block;
+}
+.contact {
+    justify-self: start;
+    grid-area: contact;
+    margin-left: 7%;
+    height: 80%;
+}
+.contact p{
+    margin: 0;
+    letter-spacing: 0;
+    line-height: 150%;
+    margin-bottom: 5px;
+}
+.contact h1{
+    margin: 0;
+}
