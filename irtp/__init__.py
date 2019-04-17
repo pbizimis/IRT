@@ -37,6 +37,7 @@ def create_app(test_config=None):
     from . import presse
     app.register_blueprint(presse.bp)
 
+    #CHANGE FOR AN AJAX REQUEST
     @app.route('/<path:path>', methods=["POST"])
     def newsletter(path):
         if request.method == "POST":
