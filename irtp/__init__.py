@@ -1,10 +1,7 @@
 import os
 
-from flask import Flask, render_template
-
-#make it runnable on GOOGLE
-#waitress-serve
-#server.py
+from flask import Flask, render_template, request, redirect, url_for
+from irtp.newsletter import post_email
 
 def page_not_found(e):
     return render_template("errors/404.html"), 404
@@ -39,6 +36,13 @@ def create_app(test_config=None):
 
     from . import presse
     app.register_blueprint(presse.bp)
+
+    @app.route('/<path:path>', methods=["POST"])
+    def newsletter(path):
+        if request.method == "POST":
+            email = request.form.get("email")
+            post_email(email)
+        return redirect(request.url)
 
     return app
 

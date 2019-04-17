@@ -1,7 +1,7 @@
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, session, url_for)
 
-from irtp.db import get_articles, get_db
+from irtp.db import get_articles
 
 bp = Blueprint("presse", __name__, url_prefix='/presse')
 

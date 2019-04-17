@@ -9,7 +9,6 @@ def get_db():
     return db, db_cursor
 
 def get_articles():
-
     db, db_cursor = get_db()
     db_cursor.execute(GET_ARTICLES)
     articles = db_cursor.fetchall()
