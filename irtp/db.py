@@ -1,7 +1,11 @@
 import sqlite3
 
-DATABASE = "irtp/databases/articles.db"
+DATABASE = "irtp/databases/irt.db"
 GET_ARTICLES = "Select * from articles"
+POST_EMAIL = """
+INSERT INTO emails (EMAIL)
+VALUES ("{}")
+"""
 
 def get_db():
     db = sqlite3.connect(DATABASE)
@@ -17,3 +21,9 @@ def get_articles():
         articles[i][2] = article[2].split(".")
     db.close()
     return articles
+
+def post_email(email):
+    db, db_cursor = get_db()
+    db_cursor.execute(POST_EMAIL.format(email))
+    db.commit()
+    db.close()

@@ -1,7 +1,7 @@
 import os
 
 from flask import Flask, render_template, request, redirect, url_for
-from irtp.newsletter import post_email
+from irtp.db import post_email
 
 def page_not_found(e):
     return render_template("errors/404.html"), 404
