@@ -9,7 +9,7 @@
         "quote quote"
         "first first"
         "second second";
-    grid-gap: 20px;
+    grid-row-gap: 20px;
 }
 /*CONTAINER-DIV*/
 .container-div {

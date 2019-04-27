@@ -35,7 +35,7 @@
         transition: 0.5s;
     }
     .sidenav-inner #sidenav-h {
-        padding: 8px 8px 20px 32px;
+        padding: 32px 8px 20px 8px;
         text-decoration: none;
         font-size: 40px;
         color: white;
@@ -46,7 +46,7 @@
     }
     .sidenav-inner p {
         text-decoration: none;
-        margin-top: -20px;
+        margin-top: 0px;
         margin-bottom: 70px;
         font-size: 20px;
         color: white;
@@ -56,7 +56,7 @@
         font-weight: 400;
     }
     .sidenav-inner a {
-        padding: 8px 8px 8px 32px;
+        padding: 20px 8px 8px 8px;
         text-decoration: none;
         font-size: 25px;
         color: white;
@@ -67,6 +67,42 @@
     }
     .sidenav-inner a:hover {
         color: #f1f1f1;
+    }
+    .sidenav-inner button {
+        background: none;
+        border: none;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        margin: auto;
+    }
+    .sidenav-inner button:focus {
+        outline:0;
+    }
+    .sidenav-inner .plus {
+        display: inline-block;
+        color: white;
+        margin: 0px;
+        position: relative;
+        top: 1px;
+        transition: 0.5s;
+        font-size: 30px;
+      }
+    .sidenav-inner .panel-konzept {
+        background-color: white;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+    } 
+    .panel-konzept a {
+        color: black;
+    }
+    .panel-konzept a:hover {
+        color: rgb(121, 121, 121);
     }
     .sidenav-inner .closebtn {
         position: absolute;
