@@ -21,29 +21,45 @@
 
     <!--NAVBAR-->
     <section>
-        <!--NAVBAR HIDDEN-->
-        <section>
-            <div id="sidenav" class="sidenav-inner">
+        <!--MOBILE NAVBAR-->
+        <section id="mobile-navbar">
+            <!--NAVBAR HIDDEN-->
+            <section>
+                <div id="sidenav" class="sidenav-inner">
                     <a href="/lp" id="sidenav-h">IRT</a>
                     <p>Der Weg zum schmerzfreien Rücken</p>
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="#">Unser Konzept</a>
                     <a href="#">Team</a>
+                    <a href="#">Häufig gestellte Fragen</a>
                     <a href="/presse">Presse</a>
-                    <a href="#">FAQ</a>
                     <a href="#">Kontakt</a>
                 </div>
+            </section>
+
+            <!--NAVBAR HAMBURGER-->
+            <section class="header">
+                <div class="bar-wrap" onclick="openNav()">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar" id="last"></div>
+                </div>
+                <h1 class="heading">IRT</h1>
+            </section>
         </section>
 
-        <!--NAVBAR HAMBURGER-->
-        <section class="header">
-            <div class="bar-wrap" onclick="openNav()">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar" id="last"></div>
-            </div>
-            <h1 class="heading">IRT</h1>
-            
+        <!--DESKTOP NAVBAR-->
+        <section id="desktop-navbar">
+            <section class="header">
+                <h1 class="heading">IRT</h1>
+                <navbar class="desktop-nav">
+                    <a href="#">Unser Konzept</a>
+                    <a href="#">Team</a>
+                    <a href="#">FAQ</a>
+                    <a href="/presse">Presse</a>
+                    <a href="#">Kontakt</a>
+                </navbar>
+            </section>
         </section>
     </section>
 
