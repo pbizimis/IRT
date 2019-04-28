@@ -3,14 +3,16 @@
     height: auto;
     width: 100%;
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto auto 25em 25em;
+    grid-template-rows: auto auto auto 350px 350px 350px 350px;
     grid-template-areas:
         "intro intro"
         "quote quote"
         "who who"
         "first first"
-        "second second";
-    grid-row-gap: 20px;
+        "second second"
+        "third third"
+        "fourth fourth";
+    grid-row-gap: 40px;
 }
 /*CONTAINER-DIV*/
 .container-div {
@@ -26,6 +28,7 @@
 }
 .container-div .container-div-text {
     align-self: center;
+    height: auto;
 }
 .container-div h1 {
     color: white;
@@ -37,6 +40,7 @@
     width: 80%;
     margin: auto;
     margin-top: 50px;
+    margin-bottom: 20px;
 }
 .container-div p {
     color: white;
@@ -45,14 +49,13 @@
 }
 .button {
     background-color: #FFFFFF; 
-    padding: 5px 20px;
-    border-radius: 7px;
+    padding: 7px 15px;
+    border-radius: 3rem;
     color: rgb(117, 117, 117);
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
-    border: 1px solid rgb(117, 117, 117);
 }
 /*QUOTE*/
 .quote {
@@ -83,36 +86,51 @@
     width: 100%;
 }
 .who-are-we div {
-    margin-top: 20px;
+    margin-top: 30px;
     width: 100%;
     text-align: center;
 }
 .who-are-we h1 {
-    font-size: 3vw;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 /*SECTIONS*/
 .sections {
     width: 100%;
-    height: 25em;
+    height: 100%;
     display: flex;
     flex-direction: row;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 .section-1 {
     grid-area: first;
+    background-image: linear-gradient(to right, rgba(107, 186, 255, 0.657), rgb(38, 152, 251)), url("/static/index/1.jpg");
 }
 .section-2 {
     grid-area: second;
+    background-image: linear-gradient(to left, rgba(107, 186, 255, 0.657), #2699FB), url("/static/index/4.jpg");
+}
+.section-3 {
+    grid-area: third;
+    background-image: linear-gradient(to right, rgba(107, 186, 255, 0.657), #2699FB), url("/static/index/1.jpg");
+}
+.section-4 {
+    grid-area: fourth;
+    background-image: linear-gradient(to left, rgba(107, 186, 255, 0.657), #2699FB), url("/static/index/4.jpg");
 }
 .section-text-div {
+    color: white;
     width: 100%;
-    height: 200px;
+    height: auto;
     align-self: center;
     text-align: center;
 }
 .section-text-div div {
-    margin: 0px;
+    margin: auto;
+    width: 85%;
 }
 .section-text {
     font-weight: 400;
@@ -125,14 +143,14 @@
 }
 .section-button {
     background-color: #FFFFFF; 
-    padding: 5px 20px;
-    border-radius: 7px;
+    padding: 7px 20px;
+    border-radius: 3rem;
     color: rgb(117, 117, 117);
     text-align: center;
     text-decoration: none;
     font-size: 16px;
+    border: 0px;
     cursor: pointer;
-    border: 1px solid rgb(117, 117, 117);
 }
 .section-img {
     display: none;
@@ -147,8 +165,26 @@
 .section-2 .section-img {
     background-image: url("/static/index/4.jpg");
 }
+.section-3 .section-img {
+    background-image: url("/static/index/1.jpg");
+}
+.section-4 .section-img {
+    background-image: url("/static/index/4.jpg");
+}
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 320px) {
+    @media screen and (min-height: 560px) {
+        .container-div {
+            height: 95vh;
+        }
+    }
+}
 
 @media screen and (min-width: 480px) {
+    .container-div {
+        height: 700px;
+    }
     .container-div h1 {
         padding: 70px 40px 0px 40px;
     }
@@ -166,16 +202,21 @@
         height: 2px;
         align-self: center;
     }
-    /*NESTED MEDIA QUERIES TRY*/
-}
-
-@media screen and (min-height: 730px, min-width: 480px) {
-    .container-div {
-        height: 800px;
+    @media screen and (min-height: 730px) {
+        .container-div {
+            height: 95vh;
+        }
     }
 }
 
+/*IPAD/LAPTOP*/
 @media screen and (min-width: 768px) {
+    .container-div {
+        height: 800px;
+    }
+    .titles {
+        font-size: 60px;
+    }
     .landing-page {
         grid-row-gap: 0px;
     }
@@ -193,10 +234,28 @@
         align-self: center;
     }
     /*SECTIONS*/
+    .section-1 {
+        background-image: none;
+    }
+    .section-2 {
+        background-image: none;
+    }
+    .section-3 {
+        background-image: none;
+    }
+    .section-4 {
+        background-image: none;
+    }
     .section-1 .section-text-div {
         text-align: left;
     }
     .section-2 .section-text-div {
+        text-align: right;
+    }
+    .section-3 .section-text-div {
+        text-align: left;
+    }
+    .section-4 .section-text-div {
         text-align: right;
     }
     .section-1 .section-text-div div {
@@ -204,6 +263,15 @@
     }
     .section-2 .section-text-div div {
         margin-right: 20px;
+    }
+    .section-2 .section-text-div div {
+        margin-left: 20px;
+    }
+    .section-2 .section-text-div div {
+        margin-right: 20px;
+    }
+    .section-text-div {
+        color: black;
     }
     .section-text {
         font-weight: 400;
@@ -217,24 +285,26 @@
     .section-button {
         background-color: #FFFFFF; 
         padding: 5px 20px;
-        border-radius: 7px;
+        border-radius: 3em;
         color: rgb(117, 117, 117);
         text-align: center;
         text-decoration: none;
         font-size: 16px;
         cursor: pointer;
-        border: 1px solid rgb(117, 117, 117);
+        border: 1px solid black;
     }
-}
-@media screen and (min-height: 560px) {
-    .container-div {
-        height: 100vh;
+    @media screen and (min-height: 820px) {
+        .container-div {
+            height: 95vh;
+        }
     }
 }
 
+/*LAPTOP*/
 @media screen and (min-width: 992px) {
 
 }
+/*BORDERS*/
 @media screen and (min-width: 1200) {
     
 }
