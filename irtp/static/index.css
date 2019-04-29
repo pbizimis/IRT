@@ -197,10 +197,7 @@
         font-size: 20px;
     }
     .quote .quote-line {
-        background-color: lightgrey;
         width: 400px;
-        height: 2px;
-        align-self: center;
     }
     @media screen and (min-height: 730px) {
         .container-div {
@@ -318,7 +315,7 @@
         width: 900px;
     }
 }
-/*BORDERS*/
+/*ENDLESS*/
 @media screen and (min-width: 1200px) {
     .section-1 .section-text-div div {
         margin-left: 60px;
