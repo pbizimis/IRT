@@ -172,11 +172,12 @@
     height: auto;
     width: 100%;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 70px 180px;
+    grid-template-rows: 100px auto auto auto;
     grid-template-areas:
         "top top"
+        "info info"
         "mid mid"
-        "info contact";
+        "contact contact";
     justify-items: center;
     align-items: flex-start;
     background-color: rgb(0, 134, 251);
@@ -195,7 +196,7 @@
 .number1 p {
     margin: 0;
 }
-.number2 {
+.newsletter {
     width: 100%;
     height: 100%;
     grid-area: mid;
@@ -203,43 +204,90 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
 }
-.number2 .newsletter-form {
+.newsletter .newsletter-form {
     margin: 0;
     padding: 0;
     line-height: 0;
 }
-.number2 .newsletter-form input{
-    margin: 0;
-    padding: 0;
+.newsletter .newsletter-form .button{
+    margin: 20px 0px 20px 0px;
+    padding: 3px 10px;
+    font-size: 15px;
+    border: 0px;
+    position: relative;
+    top: 1px;
 }
 .info {
     grid-area: info;
-    justify-self: end;
-    margin-right: 7%;
-    height: 80%;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "uber jobs"
+        "data impres";
+    justify-items: center;
+    align-items: center;
+    grid-gap: 5px;
+}
+.info-uber {
+    grid-area: uber;
+}
+.info-jobs {
+    grid-area: jobs;
+}
+.info-data {
+    grid-area: data;
+}
+.info-impres {
+    grid-area: impres;
 }
 .info a {
     text-align: end;
-    display: block;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    text-decoration: underline;
+    color: white;
+    font-weight: 400;
 }
 .contact {
-    justify-self: start;
+    margin-top: 60px;
     grid-area: contact;
-    margin-left: 7%;
-    height: 80%;
+    text-align: center;
 }
-.contact p{
+.contact p {
     margin: 0;
-    letter-spacing: 0;
-    line-height: 150%;
-    margin-bottom: 5px;
+    margin-top: 7px;
+    letter-spacing: 2px;
+    line-height: 170%;
 }
 .contact h1{
     margin: 0;
+    margin-bottom: 5px;
 }
 
 /*NAVBAR CHANGE (DESKTOP VIEW/IPAD VIEW)*/
+@media screen and (min-width: 480px) {
+    .info {
+        grid-area: info;
+        display: block;
+    }
+    .info a {
+        text-align: end;
+        display: inline-block;
+        margin-right: 10px;
+        margin-left: 10px;
+        text-decoration: none;
+        text-decoration: underline;
+        color: white;
+        font-weight: 400;
+    }
+}
+
 @media screen and (min-width: 768px) {
     #mobile-navbar {
         display: none;
@@ -250,5 +298,30 @@
     .heading {
         margin: 0px 0px 0px 30px;
     }
-    
+    .footer {
+        grid-template-columns: 40% 40%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "top mid"
+            "info contact";
+        justify-items: start;
+        justify-content: center;
+        grid-column-gap: 50px;
+    }
+    .info a{
+        display: block;
+        text-align: start;
+        margin: 0px;
+    }
+    .number1 {
+        text-align: start;
+    }
+    .newsletter {
+        align-self: center;
+        justify-content: start;
+    }
+    .contact {
+        text-align: start;
+        margin-bottom: 30px;
+    }
 }
