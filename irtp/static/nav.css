@@ -12,7 +12,6 @@
 #body::-webkit-scrollbar { 
     display: none; 
 }
-
 .titles {
     line-height: 170%;
     letter-spacing: 2px;
@@ -304,7 +303,7 @@
         grid-template-areas:
             "top mid"
             "info contact";
-        justify-items: start;
+        justify-items: center;
         justify-content: center;
         grid-column-gap: 50px;
     }
@@ -314,11 +313,11 @@
         margin: 0px;
     }
     .number1 {
-        text-align: start;
+        text-align: center;
     }
     .newsletter {
         align-self: center;
-        justify-content: start;
+        justify-content: center;
     }
     .contact {
         text-align: start;

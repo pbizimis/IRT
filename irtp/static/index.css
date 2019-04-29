@@ -29,6 +29,7 @@
 .container-div .container-div-text {
     align-self: center;
     height: auto;
+    margin: auto;
 }
 .container-div h1 {
     color: white;
@@ -62,7 +63,6 @@
     grid-area: quote;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
 }
 .quote .quote-div {
     margin: auto;
@@ -86,13 +86,13 @@
     width: 100%;
 }
 .who-are-we div {
-    margin-top: 30px;
     width: 100%;
     text-align: center;
 }
 .who-are-we h1 {
     font-size: 30px;
     font-weight: 500;
+    margin: 0px;
 }
 
 /*SECTIONS*/
@@ -227,11 +227,17 @@
     .section-text-div {
         width: 50%;
     }
+    .quote {
+        margin-top: 40px;
+    }
+    .quote-div p {
+        font-size: 22px;
+    }
     .quote .quote-line {
-        background-color: lightgrey;
         width: 700px;
-        height: 2px;
-        align-self: center;
+    }
+    .who-are-we {
+        margin: 40px 0px 40px 0px;
     }
     /*SECTIONS*/
     .section-1 {
@@ -264,10 +270,10 @@
     .section-2 .section-text-div div {
         margin-right: 20px;
     }
-    .section-2 .section-text-div div {
+    .section-3 .section-text-div div {
         margin-left: 20px;
     }
-    .section-2 .section-text-div div {
+    .section-4 .section-text-div div {
         margin-right: 20px;
     }
     .section-text-div {
@@ -283,15 +289,15 @@
         font-size: 25px;
     }
     .section-button {
-        background-color: #FFFFFF; 
+        background-color: rgba(38, 152, 251, 0.74);
         padding: 5px 20px;
         border-radius: 3em;
-        color: rgb(117, 117, 117);
+        color: white;
         text-align: center;
         text-decoration: none;
         font-size: 16px;
         cursor: pointer;
-        border: 1px solid black;
+        border: 0px;
     }
     @media screen and (min-height: 820px) {
         .container-div {
@@ -302,9 +308,28 @@
 
 /*LAPTOP*/
 @media screen and (min-width: 992px) {
-
+    .quote .quote-div {
+        max-width: 800px;
+    }
+    .quote-div p{
+        font-size: 25px;
+    }
+    .quote .quote-line {
+        width: 900px;
+    }
 }
 /*BORDERS*/
-@media screen and (min-width: 1200) {
-    
+@media screen and (min-width: 1200px) {
+    .section-1 .section-text-div div {
+        margin-left: 60px;
+    }
+    .section-2 .section-text-div div {
+        margin-right: 60px;
+    }
+    .section-3 .section-text-div div {
+        margin-left: 60px;
+    }
+    .section-4 .section-text-div div {
+        margin-right: 60px;
+    }
 }
