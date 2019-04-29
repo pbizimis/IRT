@@ -320,6 +320,7 @@
         display: block;
         text-align: start;
         margin: 0px;
+        margin-top: 10px;
     }
     .number1 {
         text-align: center;
